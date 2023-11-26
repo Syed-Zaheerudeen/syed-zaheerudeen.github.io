@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #e63946;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-1 {
+    padding: 20px;
+    width: 70%;
+    height: fit-content;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 14px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    color: #e63946;
+}
+
+.container-2 {
+    display: flex;
+    height: 95%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+}
+
+#name1,#name2 {
+    margin: 18px 8px;
+    padding: 12px;
+    outline: none;
+    font-size: large;
+}
+
+#btn {
+    margin: 18px 8px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#submitBtn,#clearBtn {
+    width: 200px;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fb2436;
+    color: #fff;
+    margin-right: 12px;
+}
+
+.res {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.res img {
+    width: 200px;
+    object-fit: cover;
+    animation-name: spinner;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}   
+
+.res b {
+    position: absolute;
+    bottom: 17px;
+    font-size: larger;
+    color: #e63946;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate3d(0,0,0,0deg);
+    }
+
+    to {
+        transform: rotate3d(0,1,0,360deg);
+    }
+}
+
+@media screen and (max-width : 900px) and (min-height : 650px) {
+    .container-2 {
+        flex-direction: column-reverse;
+    }
+
+    .form,.res {
+        width: 100%;
+    }
+
+    .res {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    h3 b {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 750px) and (max-height : 650px) {
+    #relationImg {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 350px) {
+    #relationImg {
+        width: 120px;
+    }
+
+    #clearBtn {
+        display: none;
+    }
+}
+
+
+
+
