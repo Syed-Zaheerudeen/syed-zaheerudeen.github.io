@@ -69,7 +69,7 @@ function flames() {
 function clear() {
     name1.value = "";
     name2.value = "";
-    img.setAttribute("src","images/question mark.jpeg");
+    img.setAttribute("src","images/Question Mark.jpeg");
     img.style.animationName = "spinner";
     relationName.textContent = "Relationship";
 }
