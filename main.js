@@ -379,7 +379,7 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
+        if ( xDiff < 0 ) {
             /* right swipe */ 
             let change = slideRight();
     
@@ -397,7 +397,7 @@ function handleTouchMove(evt) {
             } 
         }                       
     } else {
-        if ( yDiff > 0 ) {
+        if ( yDiff < 0 ) {
             /* down swipe */ 
             let change = slideDown();
             
