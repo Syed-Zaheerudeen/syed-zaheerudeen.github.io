@@ -380,39 +380,41 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            /* right swipe */ 
-            let change = slideRight();
-    
-            if(change === true) {
-                basePoint(4);
-                emptyCells -= 1;
-            }
-        } else {
-            /* left swipe */
+            /* left swipe */ 
             let change = slideLeft();
     
             if(change === true) {
               basePoint(4);
               emptyCells -= 1;
             } 
-        }                       
-    } else {
-        if ( yDiff > 0 ) {
-            /* down swipe */ 
-            let change = slideDown();
-        
+        } else {
+            /* right swipe */
+            let change = slideRight();
+    
             if(change === true) {
                 basePoint(4);
                 emptyCells -= 1;
             }
-        } else { 
-            /* up swipe */
+
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* up swipe */ 
             let change = slideUp();
        
             if(change === true) {
                 basePoint(4);
                 emptyCells -= 1;
             } 
+            
+        } else { 
+            /* down swipe */
+            let change = slideDown();
+        
+            if(change === true) {
+                basePoint(4);
+                emptyCells -= 1;
+            }
         }                                                                 
     }
     /* reset values */
@@ -422,7 +424,6 @@ function handleTouchMove(evt) {
         gameOver();
     }                                         
 };
-
 
 let newGame = document.getElementById("new-game");
 newGame.addEventListener("click",refresh); 
