@@ -380,51 +380,47 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            /* left swipe */ 
-            let change = slideLeft();
-    
-            if(change === true) {
-              basePoint(4);
-              emptyCells -= 1;
-            } 
-        } else {
-            /* right swipe */
+            /* right swipe */ 
             let change = slideRight();
     
             if(change === true) {
                 basePoint(4);
                 emptyCells -= 1;
             }
-
+        } else {
+            /* left swipe */
+            let change = slideLeft();
+    
+            if(change === true) {
+              basePoint(4);
+              emptyCells -= 1;
+            } 
         }                       
     } else {
         if ( yDiff > 0 ) {
-            /* up swipe */ 
-            let change = slideUp();
-       
+            /* down swipe */ 
+            let change = slideDown();
+            
             if(change === true) {
-                basePoint(4);
-                emptyCells -= 1;
+              basePoint(4);
+              emptyCells -= 1;
             } 
             
         } else { 
-            /* down swipe */
-            let change = slideDown();
-        
+            /* up swipe */
+            let change = slideUp();
+    
             if(change === true) {
-                basePoint(4);
-                emptyCells -= 1;
-            }
+              basePoint(4);
+              emptyCells -= 1;
+            } 
+            
         }                                                                 
     }
     /* reset values */
     xDown = null;
-    yDown = null;    
-    if(checkOver()) {
-        gameOver();
-    }                                         
+    yDown = null;                                             
 };
-
 let newGame = document.getElementById("new-game");
 newGame.addEventListener("click",refresh); 
 
