@@ -350,14 +350,6 @@ document.addEventListener("keydown",(e) => {
   
 })
 
-board.addEventListener('swiped-left', function(e) {
-    let change = slideLeft();
-    
-          if(change === true) {
-            basePoint(4);
-            emptyCells -= 1;
-          } 
-});
 
 let newGame = document.getElementById("new-game");
 newGame.addEventListener("click",refresh); 
