@@ -424,11 +424,15 @@ function handleTouchMove(evt) {
                 basePoint(4);
                 emptyCells -= 1;
             }
-        }                                                                 
+        } 
     }
     /* reset values */
     xDown = null;
-    yDown = null;    
+    yDown = null; 
+    
+    if(checkOver()) {
+        gameOver();
+    }
                                             
 };
 
