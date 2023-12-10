@@ -350,12 +350,87 @@ document.addEventListener("keydown",(e) => {
   
 })
 
-
 let newGame = document.getElementById("new-game");
 newGame.addEventListener("click",refresh); 
 
 let tryAgain = document.getElementById("try-again");
 tryAgain.addEventListener("click",refresh); 
+
+
+
+board.addEventListener('touchstart', handleTouchStart, false);        
+board.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+var yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                         
+function handleTouchStart(evt) {
+    evt.preventDefault();   
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                             
+};                                                
+                                                                         
+function handleTouchMove(evt) {
+    evt.preventDefault();   
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                         
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* left swipe */ 
+            let change = slideLeft();
+    
+            if(change === true) {
+              basePoint(4);
+              emptyCells -= 1;
+            } 
+
+        } else {
+            /* right swipe */
+            let change = slideRight();
+    
+            if(change === true) {
+                basePoint(4);
+                emptyCells -= 1;
+            }
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* up swipe */ 
+            let change = slideUp();
+       
+            if(change === true) {
+                basePoint(4);
+                emptyCells -= 1;
+            } 
+        } else { 
+            /* down swipe */
+            let change = slideDown();
+        
+            if(change === true) {
+                basePoint(4);
+                emptyCells -= 1;
+            }
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;    
+                                            
+};
 
 
 
