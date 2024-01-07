@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster</title>
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- boxIcons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Code<b>Master</b></div>
+
+            <ul class="nav-links computer">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#online-ide">Online IDE</a></li>
+                <li><a href="#mock-interview">Mock Interview</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+            <i id="nav-btn" class='bx bx-menu'></i>
+
+        </nav>
+    </header>
+
+    <ul class="nav-links mobile hide">
+        <li class="links"><a href="#home">Home</a></li>
+        <li class="links"><a href="#courses">Courses</a></li>
+        <li class="links"><a href="#online-ide">Online IDE</a></li>
+        <li class="links"><a href="#mock-interview">Mock Interview</a></li>
+        <li class="links"><a href="#blog">Blog</a></li>
+    </ul>
+
+    <main>
+        <section id="home">
+
+            <div class="text-container">
+                <div class="text">
+                    <h1>grow your skills to advance your career path</h1>
+                    <p>"Dive into programming languages with hands-on practice, guided lessons, and a supportive
+                        community. Start your coding journey today!"</p>
+                    <button class="btn">Get Started</button>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="images/Programmer.svg" alt="img">
+            </div>
+
+        </section>
+
+        <section id="online-ide">
+
+            <h2>Top Online IDE</h2>
+
+            <div class="cards">
+                <div class="card" id="card-1"
+                    onclick="window.open('https://www.programiz.com/python-programming/online-compiler/', '_blank'); ">
+
+                    <div class="header">
+                        <div class="name">
+                            Python
+                        </div>
+                    </div>
+
+                    <div class="body">
+                        <div class="img-container">
+                            <img src="images/python.png" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <b>click to enter</b>
+                    </div>
+
+                </div>
+
+                <div class="card" id="card-2"
+                    onclick="window.open('https://www.programiz.com/javascript/online-compiler/', '_blank'); ">
+
+                    <div class="header">
+                        <div class="name">
+                            javaScript
+                        </div>
+                    </div>
+
+                    <div class="body">
+                        <div class="img-container">
+                            <img src="images/javascript.png" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <b>click to enter</b>
+                    </div>
+
+                </div>
+
+                <div class="card" id="card-3"
+                    onclick="window.open('https://www.programiz.com/java-programming/online-compiler/', '_blank'); ">
+
+                    <div class="header">
+                        <div class="img-container">
+                        </div>
+
+                        <div class="name">
+                            Java
+                        </div>
+                    </div>
+
+                    <div class="body">
+                        <div class="img-container">
+                            <img src="images/java.png" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <b>click to enter</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="btn-container">
+                <button class="btn">Load More</button>
+            </div>
+
+        </section>
+
+
+        <section id="mock-interview">
+            <div class="text-container">
+                <div class="text">
+                    <h1>Sharpen your interview skills with our mock interview platform.</h1>
+                    <p>"Elevate your interview game with realistic interview simulations designed to hone your skills
+                        and land your dream job"</p>
+                    <button class="btn">Explore!</button>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <img src="images/Resume.png" alt="img">
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Trending Blogs</h2>
+
+            <div class="body">
+                <div class="article-container">
+                    <div class="article-tile">
+                        <div class="title">
+                            <a href="#">
+                                10 Ways to Optimize Your React Application for Performance
+                            </a>
+                        </div>
+
+                        <div class="overview">
+                            <p>
+                                Techniques and best practices to enhance speed and efficiency in React-based projects,
+                                ensuring
+                                smoother user experiences.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="article-tile">
+                        <div class="title">
+                            <a href="#">
+                                The Rise of Low-Code Development: Pros, Cons, and Future Trends
+                            </a>
+                        </div>
+
+                       <div class="overview">
+                        <p>
+                            An exploration of the growing trend of low-code development, examining its benefits,
+                            limitations, and its projected impact on software creation.
+                        </p>
+                       </div>
+                    </div>
+
+                    <div class="article-tile">
+
+                        <div class="title">
+                            <a href="#">
+                                Introduction to GPT-3: Building AI-Powered Applications
+                            </a>
+                        </div>
+
+                        <div class="overview">
+                            <p>
+                                beginner's guide delving into GPT-3 technology, exploring its potential applications and how
+                                developers can harness its power for AI-driven projects.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="article-tile">
+
+                        <div class="title">
+                            <a href="#">
+                                Cybersecurity Best Practices for Developers in 2024
+                            </a>
+                        </div>
+
+                        <div class="overview">
+                            <p>
+                                the latest security protocols and strategies essential for developers, focusing on
+                                safeguarding
+                                software and systems in the current digital landscape.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer">
+                 <button class="btn">Read More</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <ul class="foot-links">
+            <li><a href="#about-us">About Us </a></li>
+            <li><a href="#credits">Credits </a></li>
+            <li id="special">images by <a href="https://storyset.com/" target="_blank" rel="noopener noreferrer"
+                    style="color: blueviolet;">storyset</a></li>
+        </ul>
+
+        <p>&copy; 2023 CodeMaster. All rights reserved.icons by <a href="https://icons8.com/" target="_blank"
+                rel="noopener noreferrer">icons8</a></p>
+    </footer>
+</body>
+
+<script src="scripts.js"></script>
+
+</html>
