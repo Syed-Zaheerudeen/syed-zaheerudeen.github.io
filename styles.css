@@ -45,7 +45,12 @@
   /* logo design */
   
   .logo {
-    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 150px;
   }
   
   .logo b {
@@ -381,6 +386,11 @@
   /* computer screen */
   
   @media screen and (min-width: 1024px) {
+
+    .logo {
+      padding-left: 20px;
+    }
+    
     #nav-btn,
     .mobile {
       display: none;
