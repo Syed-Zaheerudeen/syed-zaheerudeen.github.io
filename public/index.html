@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYED ZAHEERUDEEN</title>
+  <link href="style.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="">
+
+  <div class="content bg-neutral-900 min-h-screen max-h-[700px] flex flex-col">
+
+    <!-- nav bar -->
+    <header class="bg-neutral-800 h-[60px] flex justify-around items-center header">
+
+      <nav id="nav-lap"
+        class="max-lg:hidden capitalize w-1/4 min-w-72 max-w-[640px] text-stone-400 font-bold text-[17px] flex justify-between">
+        <a href="#" class="border-solid border-b-2 border-b-neutral-800 !border-b-[#ffe433]"
+          onclick="navigate(this)">about</a>
+        <a href="#" class="border-solid border-b-2 border-b-neutral-800" onclick="navigate(this)">projects</a>
+        <a href="#" class="border-solid border-b-2 border-b-neutral-800" onclick="navigate(this)">skills</a>
+      </nav>
+
+      <nav id="nav-mob" class="lg:hidden w-full h-full flex justify-around items-center" onclick="toggleNav()">
+        <i class='bx bxs-down-arrow text-stone-500 text-xl animate-bounce'></i>
+      </nav>
+
+    </header>
+
+    <div
+      class="lg:hidden nav-mob-elements w-full h-full bg-zinc-800 text-stone-400 bg-opacity-90 flex flex-col items-center absolute top-0 transition ease-linear delay-150 translate-y-[-100%]">
+
+      <div class="nav-links capitalize text-2xl w-full flex-grow flex flex-col justify-center items-center">
+        <a href="#" class="">about</a>
+        <a href="#" class="mt-16 mb-16">projects</a>
+        <a href="#" class="">skills</a>
+      </div>
+
+      <div class="nav-close-btn w-full bg-neutral-800 flex justify-center hidden" onclick="toggleNav()">
+        <i class='bx bxs-up-arrow text-stone-500 text-xl mb-2 animate-bounce '></i>
+      </div>
+    </div>
+
+    <!-- main,footer section for laptop & above-->
+
+    <main class="max-lg:hidden com-main min-h-[400px] max-h-[700px] flex-grow">
+
+    </main>
+
+    <footer class="max-lg:hidden com-footer h-[70px] mb-4 flex flex-col justify-center items-center">
+
+      <div class="media-handles w-[260px] flex justify-between items-center">
+
+        <a href="https://www.linkedin.com/in/syed-zaheerudeen/" target="_blank"
+          class="linkedin-icon-com  w-[38px] h-[38px] bg-[#0077b5] flex justify-center items-center rounded-full animate-bounce">
+          <i class='bx bxl-linkedin text-[#fff] text-[27px]'></i>
+        </a>
+
+        <a href="https://github.com/Syed-Zaheerudeen" target="_blank"
+          class="github-icon-com  w-[38px] h-[38px] bg-[#24292f] flex justify-center items-center rounded-full animate-bounce">
+          <i class='bx bxl-github text-[38px] text-[#fff]'></i>
+        </a>
+
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXSpwnMjQPgGCfqcPGpkNhhNKkzMFRBZdgqCDBRkJKGwJRfTRKWMkHGrCPjFHTJxJpdfk" target="_blank"
+          class="email-icon-com  w-[38px] h-[38px] bg-red-600 flex justify-center items-center rounded-full animate-bounce">
+          <i class='bx bx-envelope text-[24px] text-[#fff]'></i>
+        </a>
+
+        <a href="https://www.geeksforgeeks.org/user/syed_zaheerudeen/" target="_blank">
+          <img width="44" height="44" src="https://img.icons8.com/color/48/GeeksforGeeks.png" alt="GeeksforGeeks"
+            class="bg-slate-800 px-1 rounded-full animate-bounce" />
+        </a>
+      </div>
+
+      <div class="label-msg w-1/4 text-center mt-2 text-stone-400 font-bold">
+          <span id="spl-msg">Let's Connect</span>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+
+<script>
+
+  //min-width 1024px
+  let section = document.getElementById("nav-lap").children;
+  let prevSection = section[0];
+
+  function navigate(element) {
+    prevSection.classList.toggle("delay-300");
+    prevSection.classList.toggle("!border-b-[#ffe433]");
+    element.classList.toggle("delay-300");
+    element.classList.toggle("!border-b-[#ffe433]");
+    prevSection = element;
+  }
+
+
+  //max-width 1024px
+  let navBarMob = document.querySelector(".nav-mob-elements");
+  let openNavBtn = document.querySelector("#nav-mob")
+  let closeNavBtn = document.querySelector(".nav-close-btn")
+  let header = document.querySelector(".header");
+  function toggleNav() {
+    navBarMob.classList.toggle("translate-y-[-100%]");
+    header.classList.toggle("hidden");
+    openNavBtn.classList.toggle("hidden");
+    closeNavBtn.classList.toggle("hidden");
+  }
+
+
+</script>
+
+</html>
