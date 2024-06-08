@@ -11,17 +11,17 @@
 
 <body class="">
 
-  <div class="content bg-neutral-900 min-h-screen max-h-[700px] flex flex-col">
+  <div class="content bg-neutral-900 min-h-screen flex flex-col">
 
     <!-- nav bar -->
-    <header class="bg-neutral-800 h-[60px] flex justify-around items-center header">
+    <header class="bg-neutral-800 h-[60px] flex justify-around items-center header fixed left-0 right-0 z-20 ">
 
       <nav id="nav-lap"
         class="max-lg:hidden capitalize w-1/4 min-w-72 max-w-[640px] text-stone-400 font-bold text-[17px] flex justify-between">
         <a href="#" class="border-solid border-b-2 border-b-neutral-800 !border-b-[#ffe433]"
           onclick="navigate(this)">about</a>
-        <a href="#" class="border-solid border-b-2 border-b-neutral-800" onclick="navigate(this)">projects</a>
-        <a href="#" class="border-solid border-b-2 border-b-neutral-800" onclick="navigate(this)">skills</a>
+        <a href="#projects" class="border-solid border-b-2 border-b-neutral-800" onclick="navigate(this)">projects</a>
+        <a href="#skills" class="border-solid border-b-2 border-b-neutral-800" onclick="navigate(this)">skills</a>
       </nav>
 
       <nav id="nav-mob" class="lg:hidden w-full h-full flex justify-around items-center" onclick="toggleNav()">
@@ -31,60 +31,316 @@
     </header>
 
     <div
-      class="lg:hidden nav-mob-elements w-full h-full bg-zinc-800 text-stone-400 bg-opacity-90 flex flex-col items-center absolute top-0 transition ease-linear delay-150 translate-y-[-100%]">
+      class="lg:hidden nav-mob-elements w-full h-full bg-zinc-800 text-stone-400 bg-opacity-80 flex flex-col items-center fixed top-0 transition ease-linear delay-150 translate-y-[-100%] z-50">
 
       <div class="nav-links capitalize text-2xl w-full flex-grow flex flex-col justify-center items-center">
-        <a href="#" class="">about</a>
-        <a href="#" class="mt-16 mb-16">projects</a>
-        <a href="#" class="">skills</a>
+        <a href="#" class="" onclick="toggleNav()">about</a>
+        <a href="#projects-mob" class="mt-16 mb-16" onclick="toggleNav()">projects</a>
+        <a href="#skills-mob" class="" onclick="toggleNav()">skills</a>
       </div>
 
-      <div class="nav-close-btn w-full bg-neutral-800 flex justify-center hidden" onclick="toggleNav()">
+      <div class="nav-close-btn w-full bg-neutral-800 flex justify-center border-t-2 border-solid border-t-stone-400/30 h-[40px] pt-4 hidden" onclick="toggleNav()">
         <i class='bx bxs-up-arrow text-stone-500 text-xl mb-2 animate-bounce '></i>
       </div>
     </div>
 
     <!-- main,footer section for laptop & above-->
 
-    <main class="max-lg:hidden com-main min-h-[450px] max-h-[700px] flex-grow flex flex-col">
-      
+    <main class="max-lg:hidden com-main min-h-[450px] flex-grow flex flex-col mt-32">
+
       <div class="container-lap flex-grow mt-2 flex flex-col justify-center items-center">
+
+        <section id="about"
+          class="h-[400px] w-4/5 min-w-[770px] max-w-[900px] border-0 border-solid border-white flex justify-center">
+
+          <div class="img-container w-[320px] px-1 opacity-90 animate-zoom">
+            <div
+              class="img w-[300px] bg-[url('images/newProfile.png')] bg-center h-full bg-contain bg-no-repeat rounded-[50px]">
+
+            </div>
+          </div>
+
+          <div class="profile-container w-[400px] flex flex-col pl-4 justify-around">
+
+            <div class="profile-info h-3/5  border-2 border-solid border-stone-400 rounded-[20px] relative delay-1000 ">
+
+              <div class="logo h-40px absolute">
+                <img src="images/logo.png" alt="" class="w-[400px] translate-y-[-20px] translate-x-[-50px]">
+              </div>
+              <!-- find the about content  -->
+              <div
+                class="about-content text-neutral-300 opacity-90 font-normal absolute top-14 left-5 pr-2 z-10 text-sm animate-fadeT">
+                Hey!, its pleasure to see you here. I am a front-end web developer who is proficient with building
+                static websites and I solve leetcode questions for fun did 100+ leetcode questions, also I have a
+                Bachelor's degree in Computer Application. <span class="italic text-yellow-400">"currently looking for
+                  an internship"</span>, if you think my skills can be your profit don't hesitate to mail me. want to
+                know more then scroll down
+                <span class="text-yellow-400"> &#8595; </span>
+                <div class="mt-2 text-lime-400 font-bold underline">syedzaheerudeen4@gmail.com</div>
+              </div>
+
+            </div>
+
+            <div class="education-info h-[30%] border-2 border-solid border-stone-400 rounded-[20px] delay-1000 ">
+
+              <div class="title capitalize pl-5 pt-2 text-yellow-500 opacity-80 text-xl font-sans font-bold">
+                education
+              </div>
+
+              <div class="education-content pl-5 text-neutral-300 opacity-90 mt-1 text-sm animate-fadeT">
+                <div class="ed-1">BCA | Dr.MGR UNIVERSITY | 8 - CGPA</div>
+                <div class="ed-2 mt-1">XII | PRINCESS.MATRIC.HR.SEC.SCHOOL | 72%</div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section id="projects"
+          class="min-h-[550px] h-[900px] w-4/5 min-w-[770px] max-w-[900px] flex flex-col justify-around items-center pt-24 mb-7 ">
+
+          <div class="pj-1 h-[250px] w-[730px] bg-fuchsia-800 border-2 border-solid border-white rounded-[20px] flex justify-around ">
+
+              <div class="pj-content-r w-[50%]  text-sm text-right text-slate-50 font-normal  flex flex-col justify-center items-center ">
+                   <a href="https://codemaster-39463.web.app/" target="_blank" class="pj-title h-[30px] w-full capitalize text-xl text-zinc-100 font-bold group ">
+                    <span>code master</span>
+                    <i class='bx bx-log-in-circle rotate-180 group-hover:text-green-300'></i>
+                   </a>
+                   
+                   An e-learning website which job is to collect coding tutorials from youtube and structure it into step-by-step course, which makes a users learning process faster & efficient, along with that there is an integerated blogging platform to share knowledge of each other and its features are, authentication, CRUD operations, interactive-UI
         
-          <section id="about" class="h-[400px] w-4/5 min-w-[770px] max-w-[900px] border-0 border-solid border-white flex justify-center">
+              </div>
+  
+              <div class="pj-image img w-[40%] bg-[url('images/codemaster-mockupbg.png')] bg-neutral-900 bg-center h-full bg-contain bg-no-repeat border-l-2 border-solid border-stone-400 "></div>
 
-            <div class="img-container w-[320px] px-1">
-               <div class="img w-[300px] bg-[url('images/newProfile.png')] bg-center h-full bg-contain bg-no-repeat rounded-[50px]">
- 
+          </div>
+
+          <div class="pj-2  h-[250px] w-[730px] bg-indigo-900  border-2 border-solid border-white rounded-[20px] flex justify-around ">
+
+               <div class="pj-image img w-[40%] bg-[url('images/2048-mockupbg.png')] bg-neutral-900 bg-center h-full bg-contain bg-no-repeat ">
+
                </div>
+
+               <div class="pj-content-l w-[50%] text-sm  text-[#fff] font-normal  flex flex-col justify-center items-center animate-fadeL">
+                   <a href="https://2048-gameee.netlify.app/" target="_blank" class="pj-title h-[30px] w-full capitalize text-xl text-zinc-100 font-bold group ">
+                    <i class='bx bx-log-in-circle group-hover:text-green-300'></i>
+                    <span>2048 game</span>
+                   </a>
+                   
+                   Its a 2d-game which can make you active and refresh your MATH. The game rules are simple, When Two Tiles With The Same Number Touch, They Merge Into One. Once You Get 2048 In Any Square, You Win. you can also see your <div class="text-left w-full">score <span class="italic font-bold text-yellow-400">mine was 15000 can you beat me?</span></div>
+               </div>
+
             </div>
 
-            <div class="profile-container w-[400px] flex flex-col pl-4 justify-around">
-                
-               <div class="profile-info h-3/5  border-2 border-solid border-white rounded-[20px]">
-                  
-                  <div class="logo h-40px">
-                      <img src="images/logo.png" alt="" class="w-[400px] translate-y-[-20px] translate-x-[-50px]">
-                  </div>
+            <div class="pj-3  h-[250px] w-[730px] bg-pink-800 border-2 border-solid border-white rounded-[20px] flex justify-around">
 
-                  <div class="content">
+                <div class="pj-content-r w-[50%] text-sm text-right text-slate-50 font-normal  flex flex-col justify-center items-center animate-fadeR">
 
-                  </div>
-
+                  <a href="https://flames-gameee.netlify.app/" target="_blank" class="pj-title h-[30px] w-full capitalize text-xl text-zinc-100 font-bold group ">
+                    <span>flames game</span>
+                    <i class='bx bx-log-in-circle rotate-180 group-hover:text-green-300'></i>
+                   </a>
+                   
+                   flames is an prediction game which allows you to predict whether the relationship between you and your crush will ever be an succesfull marriage or not if you wanna know then checkout yourself, also you can check relationship between any two people and there are 6 outcomes
                </div>
 
-               <div class="education-info h-[30%] border-2 border-solid border-white rounded-[20px]">
-
-               </div>
-               
+               <div class="pj-image img w-[40%] bg-neutral-900 bg-[url('images/flames-mockupbg.png')] bg-center h-full bg-contain bg-no-repeat "></div>
+                 
             </div>
+
+        </section>
+
+        <section id="skills" class=" h-[400px] w-4/5 min-w-[770px] max-w-[900px] flex flex-col justify-around items-center pt-52 mb-[210px] relative font-semibold">
+
+           <div class="base1-container w-[200px] h-[200px] border-[1px] border-solid border-stone-400 absolute rounded-full ">
+            
+             <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto animate-revolve1">
+              <i class='bx bxl-html5 text-[40px] text-[#e34c26]'> </i>   
+              <span class="text-stone-400">HTML</span>
+             </span>    
+
+             <span class="html-cls w-fit h-fit flex flex-col justify-center items-center translate-x-[-15px] absolute left-0 right-0 top-0 bottom-0 m-auto animate-revolve2">
+              <i class='bx bxl-css3 text-[40px] text-[#264de4]'> </i>   
+              <span class="text-stone-400">CSS</span>
+             </span>  
              
-          </section>
+
+           </div>
+
+           <div class="base2-container w-[350px] h-[350px] border-[1px] border-solid border-stone-400 absolute rounded-full ">
+            
+            <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute top-0 bottom-0 left-0 right-0 m-auto animate-revolve3">
+              <i class='bx bxl-tailwind-css text-[40px] text-[#00ACC1]'> </i>   
+              <span class="text-stone-400">tailwind </span>
+             </span> 
+      
+             <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute top-0 bottom-0 left-0 right-0 m-auto animate-revolve4">
+              <i class='bx bxl-javascript text-[40px] text-[#f0db4f]'> </i>   
+              <span class="text-stone-400">javascript</span>
+             </span> 
+
+          </div>
+
+          <div class="base3-container w-[450px] h-[450px] border-[1px] border-solid border-stone-400 absolute rounded-full ">
+            
+            <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto animate-revolve5">
+              <img width="46" height="46" src="https://img.icons8.com/color/96/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>  
+              <span class="text-stone-400">java</span>
+             </span> 
+
+          </div>
+
+
+
+           <div class="lable-name capitalize w-fit h-fit text-3xl text-yellow-400 font-semibold absolute z-10"> skills </div>
+                  
+        </section>
 
       </div>
 
     </main>
 
-    <footer class="max-lg:hidden com-footer h-[70px] mt-2 mb-4 flex flex-col justify-center items-center">
+
+    <!-- mobile-screen -->
+
+    <main class="lg:hidden mob-main flex flex-col justify-center items-center mt-10">
+
+      <div id="about-mob" class=" h-[900px] w-11/12 flex flex-col justify-center items-center mb-2">
+        
+         <div class="profile-img w-[200px] h-[200px] bg-[url('images/newProfile.png')] bg-center bg-cover bg-no-repeat rounded-full shadow-lg shadow-yellow-400/75 mb-16 opacity-90"></div>
+
+         <div class="about-content-mob w-full max-w-[480px] h-[320px] border-2 border-solid border-stone-400 rounded-[50px] relative mb-5">
+          
+            <img src="images/logo.png" alt="" class="h-[150px] translate-y-[-20px] translate-x-[-5px] absolute">
+          
+            <div class=" about-info-mob w-[95%]  text-neutral-300 opacity-90 font-normal absolute top-[90px] left-3 pr-2 z-10 text-[85%] text-justify mediumMob:leading-5 largeMob:leading-6  animate-fadeT">
+              
+              Hey!, its pleasure to see you here. I am a front-end web developer who is proficient with building
+              static websites and I solve leetcode questions for fun did 100+ leetcode questions, also I have a
+              Bachelor's degree in Computer Application. <span class="italic text-yellow-400">"currently looking for
+                an internship"</span>, if you think my skills can be your profit don't hesitate to mail me. want to
+              know more then scroll down
+              <span class="text-yellow-400"> &#8595; </span>
+              <div class="mt-2 text-lime-400 font-bold underline">syedzaheerudeen4@gmail.com</div>
+
+            </div>  
+
+
+         </div>
+
+         <div class="education-content-mob text-center w-full max-w-[480px] h-[110px] border-2 border-solid border-stone-400 rounded-[50px] pr-5 ">
+
+          <div class="title capitalize pl-5 pt-2 text-yellow-500 opacity-80 text-xl  font-sans font-bold mb-2">
+            education
+          </div>
+
+          <div class="education-content pl-5 text-neutral-300 opacity-90 mt-1 text-sm animate-fadeT">
+            <div class="ed-1">BCA | Dr.MGR UNIVERSITY | 8 - CGPA</div>
+            <div class="ed-2 mt-1">XII | PRINCESS.MATRIC.HR.SEC.SCHOOL | 72%</div>
+          </div>
+
+         </div>
+
+      </div>
+
+      <div id="projects-mob" class=" h-[1000px] w-11/12 flex flex-col justify-center items-center mb-5 ">
+
+      <div id="project-label-mob" class="capitalize h-[40px] text-yellow-500 opacity-80 text-3xl  font-sans font-bold mb-2">projects</div>
+
+        <a href="https://codemaster-39463.web.app/" target="_blank" class="pj-content-r w-full max-w-[480px] h-[320px] border-2 border-solid border-stone-400 rounded-[50px] bg-fuchsia-800 flex flex-col justify-center items-center mb-5 relative" >
+          
+          <span class="pj-title h-[40px] w-full capitalize text-center text-xl text-zinc-100 font-bold absolute top-0 hidden">project-1</span>
+
+          <div class="pj-image img w-full bg-[url('images/codemaster-mockupbg.png')]  bg-center h-full bg-contain bg-no-repeat rounded-tl-[50px]"></div>
+          
+          <div class="pj-title h-[40px] w-full capitalize text-center text-xl text-zinc-100 border-t-2 border-solid border-stone-400 font-bold group ">
+             <span>code master</span>
+
+          </div>
+
+        </a>
+
+        <a href="https://2048-gameee.netlify.app/" target="_blank" class="pj-content-l w-full max-w-[480px] h-[320px] border-2 border-solid border-stone-400 rounded-[50px] bg-indigo-900 flex flex-col justify-center items-center mb-5 relative" >
+          
+          <span class="pj-title h-[40px] w-full capitalize text-center text-xl text-zinc-100 font-bold absolute top-0 hidden">project-2</span>
+
+          <div class="pj-image img w-full bg-[url('images/2048-mockupbg.png')]  bg-center h-full bg-contain bg-no-repeat rounded-tl-[50px]"></div>
+          
+          <div class="pj-title h-[40px] w-full capitalize text-center text-xl text-zinc-100 border-t-2 border-solid border-stone-400 font-bold group ">
+             <span>2048 game</span>
+          </div>
+
+        </a>
+
+        <a href="https://flames-gameee.netlify.app/" target="_blank" class="pj-content-r w-full max-w-[480px] h-[320px] border-2 border-solid border-stone-400 rounded-[50px] bg-pink-800 flex flex-col justify-center items-center mb-5 relative" >
+          
+          <span class="pj-title h-[40px] w-full capitalize text-center text-xl text-zinc-100 font-bold absolute top-0 hidden">project-3</span>
+
+          <div class="pj-image img w-full bg-[url('images/flames-mockupbg.png')]  bg-center h-full bg-contain bg-no-repeat rounded-tl-[50px]"></div>
+          
+          <div class="pj-title h-[40px] w-full capitalize text-center text-xl text-zinc-100 border-t-2 border-solid border-stone-400 font-bold group ">
+             <span>flames game</span>
+          </div>
+
+        </a>
+
+
+      </div> 
+
+      <div id="skills-mob" class=" h-[400px] w-11/12 flex flex-col justify-around items-center pt-52 mb-[210px] relative font-semibold">
+
+        <div class="base1-container w-[120px] h-[120px] border-[1px] border-solid border-stone-400 absolute rounded-full ">
+         
+          <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto animate-revolve6">
+           <i class='bx bxl-html5 text-[20px] text-[#e34c26]'> </i>   
+           <span class="text-stone-400 text-sm">HTML</span>
+          </span>    
+
+          <span class="html-cls w-fit h-fit flex flex-col justify-center items-center translate-x-[-15px] absolute left-0 right-0 top-0 bottom-0 m-auto animate-revolve7">
+           <i class='bx bxl-css3 text-[20px] text-[#264de4]'> </i>   
+           <span class="text-stone-400 text-sm">CSS</span>
+          </span>  
+          
+
+        </div>
+
+        <div class="base2-container w-[230px] h-[230px] border-[1px] border-solid border-stone-400 absolute rounded-full ">
+         
+         <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute top-0 bottom-0 left-0 right-0 m-auto animate-revolve8">
+           <i class='bx bxl-tailwind-css text-[20px] text-[#00ACC1]'> </i>   
+           <span class="text-stone-400 text-sm">tailwind </span>
+          </span> 
+   
+          <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute top-0 bottom-0 left-0 right-0 m-auto animate-revolve9">
+           <i class='bx bxl-javascript text-[20px] text-[#f0db4f]'> </i>   
+           <span class="text-stone-400 text-sm">javascript</span>
+          </span> 
+
+       </div>
+
+       <div class="base3-container w-[330px] h-[330px] border-[1px] border-solid border-stone-400 absolute rounded-full ">
+         
+         <span class="html-cls w-fit h-fit flex flex-col justify-center items-center absolute left-0 right-0 top-0 bottom-0 m-auto animate-revolve10">
+           <img width="26" height="26" src="https://img.icons8.com/color/96/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>  
+           <span class="text-stone-400 text-sm">java</span>
+          </span> 
+
+       </div>
+
+
+
+        <div class="lable-name capitalize w-fit h-fit text-xl text-yellow-400 font-semibold absolute z-10"> skills </div>
+               
+     </div>
+
+       
+     
+    </main>
+
+
+    <footer class="h-[70px] mt-2 mb-4 flex flex-col justify-center items-center">
 
       <div class="media-handles w-[260px] flex justify-between items-center">
 
@@ -100,7 +356,8 @@
           <i class='bx bxl-github text-[38px] text-[#fff]'></i>
         </a>
 
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXSpwnMjQPgGCfqcPGpkNhhNKkzMFRBZdgqCDBRkJKGwJRfTRKWMkHGrCPjFHTJxJpdfk" target="_blank"
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXSpwnMjQPgGCfqcPGpkNhhNKkzMFRBZdgqCDBRkJKGwJRfTRKWMkHGrCPjFHTJxJpdfk"
+          target="_blank"
           class="email-icon-com  w-[38px] h-[38px] bg-red-600 flex justify-center items-center rounded-full animate-bounce">
           <i class='bx bx-envelope text-[24px] text-[#fff]'></i>
         </a>
@@ -112,7 +369,7 @@
       </div>
 
       <div class="label-msg w-1/4 text-center mt-2 text-stone-400 font-bold">
-          <span id="spl-msg">Let's Connect</span>
+        <span id="spl-msg" class="mediumMob:text-sm ">Let's Connect</span>
       </div>
 
     </footer>
@@ -124,13 +381,16 @@
 <script>
 
   //min-width 1024px
+  let projectContentR = document.querySelectorAll(".pj-content-r");
+  let projectContentL = document.querySelectorAll(".pj-content-l");
+  let projectImg = document.querySelectorAll(".pj-image");
   let section = document.getElementById("nav-lap").children;
   let prevSection = section[0];
 
   function navigate(element) {
-    prevSection.classList.toggle("delay-300");
+    prevSection.classList.toggle("delay-100");
     prevSection.classList.toggle("!border-b-[#ffe433]");
-    element.classList.toggle("delay-300");
+    element.classList.toggle("delay-100");
     element.classList.toggle("!border-b-[#ffe433]");
     prevSection = element;
   }
@@ -146,8 +406,46 @@
     header.classList.toggle("hidden");
     openNavBtn.classList.toggle("hidden");
     closeNavBtn.classList.toggle("hidden");
+    mobMain.classList.toggle("opacity-60");
+    
   }
 
+
+  const observerR = new IntersectionObserver((entries) => {
+       entries.forEach((entry) => {
+           if(entry.isIntersecting) {
+              entry.target.classList.add("animate-fadeR");
+           } else {
+              entry.target.classList.remove("animate-fadeR");
+           }
+       });
+  });
+
+  const observerL = new IntersectionObserver((entries) => {
+       entries.forEach((entry) => {
+           if(entry.isIntersecting) {
+              entry.target.classList.add("animate-fadeL");
+           } else {
+              entry.target.classList.remove("animate-fadeL");
+           }
+       });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+       entries.forEach((entry) => {
+           if(entry.isIntersecting) {
+              navigate(entry.target);
+           } 
+       });
+  });
+
+  projectContentR.forEach((el) => observerR.observe(el));
+  projectContentL.forEach((el) => observerL.observe(el));
+
+  //mobile screen
+
+  let mobMain = document.querySelector(".mob-main");
+  
 
 </script>
 
